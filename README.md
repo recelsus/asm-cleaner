@@ -13,7 +13,7 @@ Overview
 
 Usage (after build)
 -------------------
-- Run: `./bin/asm-cleaner [--yes] [--dry-run]`
+- Run: `./build/asm-cleaner [--yes] [--dry-run]`
   - `--dry-run`: list found files without deleting
   - `--yes`: delete without confirmation
   - With neither, it asks for `y` to confirm per file

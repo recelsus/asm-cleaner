@@ -1,5 +1,6 @@
 *.o
 bin/
+build/
 main
 
 *.swp
@@ -15,4 +16,3 @@ main
 
 test/dummy/.DS_Store
 test/dummy/.AppleDouble
-
