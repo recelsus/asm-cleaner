@@ -106,6 +106,7 @@ print_name:
     mov rsi, rdi
     mov rdi, prefix
     call print_fmt
+    call putnl
     ret
 
 section .data
@@ -115,4 +116,3 @@ prefix db "[found] ", 0
 
 auto_yes db 0
 dry_run db 0
-

@@ -12,6 +12,15 @@ LDFLAGS :=
 
 all:
 	mkdir -p bin
+	@command -v $(NASM) >/dev/null 2>&1 || { \
+	  echo "Error: 'nasm' is not installed or not in PATH."; \
+	  echo "See README.md for install instructions."; \
+	  exit 127; \
+	}
+	@command -v $(LD) >/dev/null 2>&1 || { \
+	  echo "Error: linker 'ld' is not installed or not in PATH (install binutils)."; \
+	  exit 127; \
+	}
 	$(NASM) $(NASMFLAGS) -o main.o $(SRC)
 	$(LD) main.o -o $(OUT)
 
@@ -26,4 +35,3 @@ install:
 
 uninstall:
 	rm -f ~/.local/bin/$(NAME)
-
